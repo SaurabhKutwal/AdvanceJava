@@ -1,11 +1,14 @@
 package Java8;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class JavaStream {
     public static void main(String[] args) {
-        List<String> names = List.of("Saurabh","Vikram","Vinay","Ganesh","Ashwini","Omkar","Shubham");
+        List<String> names = List.of("Saurabh", "Vikram", "Vinay", "Ganesh", "Ashwini", "Omkar", "Shubham");
 
         //Intermediate operations
 
@@ -20,11 +23,11 @@ public class JavaStream {
 
         // 3. Sorted -> Take Comparator
         //Sort the name list in descending order of length of names.
-        System.out.println(names.stream().sorted((x,y) -> y.length() - x.length()).collect(Collectors.toList()));
+        System.out.println(names.stream().sorted((x, y) -> y.length() - x.length()).collect(Collectors.toList()));
 
         // 4. Distinct -> remove duplicates from stream
         // Print without duplicates.
-        List<Integer> numbers = List.of(77,57,82,80,61,77,74,44,91,77);
+        List<Integer> numbers = List.of(77, 57, 82, 80, 61, 77, 74, 44, 91, 77);
         numbers.stream().distinct().forEach(System.out::println);
 
         System.out.println();
@@ -41,7 +44,7 @@ public class JavaStream {
 
         // 7. peek -> take consumer, perform only return nothing,  but it is  intermediate operation.
         //count of even numbers and print them.
-        System.out.println(numbers.stream().filter(x -> x%2 == 0).peek(System.out::println).count());
+        System.out.println(numbers.stream().filter(x -> x % 2 == 0).peek(System.out::println).count());
 
         //Terminal Operations
 
@@ -54,18 +57,18 @@ public class JavaStream {
         System.out.println(numbers.stream().distinct().count());
 
         // 3. max -> Takes comparator return maximum value from stream
-        System.out.println(numbers.stream().max((x,y) -> x-y).get());
+        System.out.println(numbers.stream().max((x, y) -> x - y).get());
 
         // 4. min -> Takes comparator return minimum values
-        System.out.println(numbers.stream().min((x,y) -> x-y).get());
+        System.out.println(numbers.stream().min((x, y) -> x - y).get());
 
         // 5. anyMatch, allMatch, noneMatch -> Take predicate and return boolean as per condition
         //Is any number is above 100
-        System.out.println(numbers.stream().anyMatch(x->x>100));
+        System.out.println(numbers.stream().anyMatch(x -> x > 100));
         //Are all numbers are below 100
-        System.out.println(numbers.stream().allMatch(x -> x<100));
+        System.out.println(numbers.stream().allMatch(x -> x < 100));
         //Are all are even numbers
-        System.out.println(numbers.stream().noneMatch(x -> x%2 == 1));
+        System.out.println(numbers.stream().noneMatch(x -> x % 2 == 1));
 
         // 6. findFirst -> return first entry of steam if present.
         //    findAny -> return any entry from stream.
@@ -74,11 +77,15 @@ public class JavaStream {
 
         // 7. reduce -> Take binary Operator , return only 1 value for all the stream values
         //sum of numbers
-        System.out.println(numbers.stream().reduce((x,y) -> x+y).get());
+        System.out.println(numbers.stream().reduce((x, y) -> x + y).get());
 
-
-
-
+        Function<Integer,Integer> square = (a) -> a*a;
+        List<Integer> numbers2 =  List.of(1,2,3,4,5,6);
+        ArrayList<Integer> squares = new ArrayList<>();
+        for (int i: numbers2){
+            squares.add(square.apply(i));
+        }
+        System.out.println(squares);
 
 
     }
