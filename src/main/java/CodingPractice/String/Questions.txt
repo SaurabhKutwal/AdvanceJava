@@ -1,0 +1,97 @@
+#---------------------- Basic String Operations ----------------------------#
+
+1 .Reverse a String -> Done
+
+Input: "hello"
+Output: "olleh"
+
+2 .Check for Palindrome
+
+Input: "madam"
+Output: true
+Input: "hello"
+Output: false
+
+3.Count Vowels and Consonants
+
+Input: "Java Programming"
+Output: Vowels: 5, Consonants: 9
+
+
+4.Count Words in a Sentence
+
+Input: "Welcome to Java programming"
+Output: 5 words
+
+5.Find a Character's Frequency
+
+Input: String: "programming", Character: 'g'
+Output: 2
+
+6.Remove Whitespace
+
+Input: "Java is fun"
+Output: "Javaisfun"
+
+Toggle Case
+
+Input: "Java Programming"
+Output: "jAVA pROGRAMMING"
+Check Anagram
+
+Input: "listen" and "silent"
+Output: true
+Input: "hello" and "world"
+Output: false
+
+
+#---------------------- Intermediate String Manipulation ----------------------------#
+Remove Duplicates
+
+Input: "programming"
+Output: "progamin"
+Longest Word in a Sentence
+
+Input: "Find the longest word here"
+Output: "longest"
+Character Repetition
+
+Input: "swiss"
+Output: First non-repeating character: 'w'
+Substring Occurrences
+
+Input: String: "banana", Substring: "ana"
+Output: 2
+Sort Characters
+
+Input: "programming"
+Output: "aggimmnoprr"
+Check Substring
+
+Input: String: "hello world", Substring: "world"
+Output: true
+Remove Specific Characters
+
+Input: String: "balloon", Character: 'l'
+Output: "baoon"
+#---------------------- Advanced Challenges ----------------------------#
+String Compression
+
+Input: "aaabbc"
+Output: "a3b2c1"
+Permutations of a String
+
+Input: "abc"
+Output: "abc", "acb", "bac", "bca", "cab", "cba"
+Find Duplicate Words
+
+Input: "This is a test. This test is simple."
+Output: Duplicate words: "this", "test", "is"
+Split String on Special Characters
+
+Input: "hello,world!java.programming"
+Output: ["hello", "world", "java", "programming"]
+Reverse Each Word in a Sentence
+
+Input: "Welcome to Java"
+Output: "emocleW ot avaJ"
